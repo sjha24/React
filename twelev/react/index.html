@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="navContainer">
+
+    </div>
+
+  
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    <script type="text/babel">
+        
+class NavigationBar extends React.Component{
+    render(){
+        return(
+            <div>
+                {this.props.name}
+                {this.props.mobile_num}
+                <h1>React Example</h1>
+              <h2>Saurav Web</h2>
+              <button>Login</button>
+              <button>Signup</button>
+            </div>
+        );
+    }
+}
+ReactDOM.render(
+    <NavigationBar name = {<h2>saurav</h2>} mobile_num = {'9315307748'}/>,
+    document.getElementById('navContainer')
+)
+</script>
+<script src="./index.js"></script>
+</body>
+</html>

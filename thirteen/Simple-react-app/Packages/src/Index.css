@@ -1,0 +1,9 @@
+.d-inline{
+    display: inline;
+}
+.Container{
+    display: flex;
+}
+button{
+    cursor: pointer;
+}

@@ -46,7 +46,7 @@ class FetchDataDisplay extends Component{
         );
     }
 
-    //final step to execute react code
+    //final step to execute react cod
     componentDidMount(){
         this.fetchData();
     }
