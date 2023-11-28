@@ -2,7 +2,8 @@ class Card extends React.Component{
     constructor(props){
         super(props),
         this.state = {
-            countLikeDislike :0
+            countLikeDislike :0,
+            parentCount : 0
         }
     }
     likeCounterHandle=()=>{
@@ -23,6 +24,10 @@ class Card extends React.Component{
             })
         }
     }
+    rest=()=>{
+        this.setState({countLikeDislike : 0})
+    }
+
     render(){
         // const obj = {
             //     id: 1,
@@ -42,6 +47,8 @@ class Card extends React.Component{
                     <button onClick = {this.likeCounterHandle}>👍</button>
                     {this.state.countLikeDislike}
                     <button onClick = {this.DisikeCounterHandle}>👎</button>
+                    <button onClick  = {this.rest}>Rest</button>
+                    <button onClick  = {this.props.parentCount}>incParentCnt</button>
                 </div>
                 {/* {this.likeDislikeCounterHandle} */}
             </div>

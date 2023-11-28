@@ -7,6 +7,7 @@ class App extends React.Component{
         super()
         this.state = {
             data : [],
+            totalCount: 0
         }
     }
     // getData=()=>{
@@ -38,6 +39,7 @@ class App extends React.Component{
                 first_name={item.first_name}
                 last_name={item.last_name}
                 email = {item.email}
+                parentCount = {this.increaseCount}
             />
         ));
     deleteCard=()=>{
@@ -49,11 +51,19 @@ class App extends React.Component{
             }
         })
     }
+    increaseCount =()=>{
+        this.setState(prev=>{
+            return{
+                totalCount : prev.totalCount+1
+            }
+        })
+    }
     render(){
         return(
             <div className = 'App-container'>
                 {/* <button onClick = {this.getData}>Click</button> */}
                 {/* <button onClick = {this.getDataByAxios}>Click Axios</button> */}
+                <h1>Parent Totak Count - {this.state.totalCount}</h1>
                 <button onClick = {this.deleteCard}>Delete</button>
             <div className = 'card-list'>
             {this.cardConverter()}
