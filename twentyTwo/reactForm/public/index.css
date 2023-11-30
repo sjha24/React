@@ -1,0 +1,17 @@
+.App-container{
+     margin-top: 100px;
+     justify-content: center;
+     text-align: center;
+}
+button{
+    width: 100px;
+    height: 100px;
+}
+button:hover{
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
